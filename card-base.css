@@ -1,0 +1,56 @@
+/* Shared shell for design-system preview cards */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+@import url('tokens.css');
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:var(--font-sans);
+  font-feature-settings:'cv11','ss01','ss03';
+  background:var(--bg);
+  color:var(--fg-body);
+  -webkit-font-smoothing:antialiased;
+  letter-spacing:var(--tracking-tight);
+  font-size:14px;
+  line-height:1.5;
+}
+
+.card{
+  min-height:100vh;
+  padding:48px 56px;
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+}
+
+.card-head{display:flex;flex-direction:column;gap:6px}
+.card-eyebrow{
+  font-size:12px;
+  font-weight:var(--fw-semibold);
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--accent-strong);
+}
+.card-title{
+  font-size:36px;
+  font-weight:var(--fw-bold);
+  color:var(--fg-display);
+  letter-spacing:var(--tracking-tighter);
+  line-height:1.1;
+}
+.card-sub{
+  font-size:15px;
+  font-weight:var(--fw-medium);
+  color:var(--fg-muted);
+  max-width:62ch;
+  line-height:1.5;
+}
+
+.section-label{
+  font-size:11px;
+  font-weight:var(--fw-semibold);
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--fg-muted);
+  margin-bottom:14px;
+}

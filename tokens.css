@@ -1,0 +1,97 @@
+/* ============================================================
+   Ariel Design System — Tokens
+   Source: Manual de Marca 2024
+   ============================================================ */
+
+:root{
+  /* ---------- Typography ---------- */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Weights — recommended use */
+  --fw-regular: 400;  /* body copy */
+  --fw-medium:  500;
+  --fw-semibold:600;  /* titles */
+  --fw-bold:    700;
+  --fw-black:   900;  /* reserve for very specific cases, often uppercase */
+
+  /* Letter-spacing — manual recommends -1% on titles */
+  --tracking-tight:  -0.01em;
+  --tracking-tighter:-0.025em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+
+  /* ---------- Colors: Primary ---------- */
+  --primary-1000:#131B3B;  /* display titles, dark bg, logotype + tagline */
+  --primary-700: #177BC2;
+  --primary-500: #72C1E3;  /* brand blue, icon color — Pantone 297C */
+  --primary-200: #D6EFFA;
+  --primary-100: #EAF7FC;
+  --primary-50:  #F9FDFF;
+
+  /* ---------- Colors: Gray ---------- */
+  --gray-900:#0B0B0E;  /* titles */
+  --gray-700:#454A50;  /* body copy */
+  --gray-500:#969DA3;
+  --gray-200:#E5E8EA;
+  --gray-100:#F2F3F5;
+  --gray-50: #F9F9FA;
+
+  /* ---------- Colors: Green (graphics, gradients) ---------- */
+  --green-900:#05603A;
+  --green-700:#039855;
+  --green-500:#32D583;  /* main green for graphics + gradients */
+  --green-200:#D1FADF;
+  --green-100:#ECFDF3;
+  --green-50: #F6FEF9;
+
+  --white:#FFFFFF;
+  --black:#000000;
+
+  /* ---------- Semantic ---------- */
+  --fg-display: var(--primary-1000); /* display titles */
+  --fg-strong:  var(--gray-900);     /* h1/h2 in copy */
+  --fg-body:    var(--gray-700);     /* body */
+  --fg-muted:   var(--gray-500);
+  --bg:         var(--white);
+  --bg-soft:    var(--gray-50);
+  --bg-dark:    var(--primary-1000);
+  --border:     var(--gray-200);
+  --accent:     var(--primary-500);
+  --accent-strong: var(--primary-700);
+
+  /* ---------- Radius ---------- */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* ---------- Spacing scale (4 px base) ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10:40px;
+  --space-12:48px;
+  --space-16:64px;
+  --space-20:80px;
+
+  /* ---------- Shadows ---------- */
+  --shadow-xs:0 1px 2px rgba(11,11,14,.04);
+  --shadow-sm:0 1px 3px rgba(11,11,14,.06), 0 1px 2px rgba(11,11,14,.04);
+  --shadow-md:0 4px 12px rgba(19,27,59,.06), 0 2px 4px rgba(19,27,59,.04);
+  --shadow-lg:0 12px 32px rgba(19,27,59,.10), 0 4px 8px rgba(19,27,59,.04);
+  --shadow-xl:0 24px 48px rgba(19,27,59,.14);
+  --shadow-focus:0 0 0 4px rgba(114,193,227,.28);
+
+  /* ---------- Motion ---------- */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:   120ms;
+  --dur-base:   180ms;
+  --dur-slow:   320ms;
+}
