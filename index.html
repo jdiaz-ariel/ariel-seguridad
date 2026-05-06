@@ -465,6 +465,8 @@
     color:var(--gray-700);
     font-size:16px;
     line-height:1.65;
+    overflow-wrap:break-word;
+    word-wrap:break-word;
   }
   .acc-body-inner > * + *{margin-top:14px}
   .acc-body-inner p{text-wrap:pretty}
@@ -779,22 +781,90 @@
 
   /* ---------- Responsive ---------- */
   @media (max-width: 900px){
-    .principles{grid-template-columns:repeat(2,1fr)}
+    .container,.container-narrow{padding:0 20px}
+    .nav-inner{padding:14px 20px;gap:10px}
+    .logo{height:30px}
     .nav-links{display:none}
-    .commitment-grid{grid-template-columns:1fr;gap:24px}
-    .commitment-shield{justify-self:start;width:140px;height:140px}
-    .commitment-shield .badge{width:100px;height:100px}
-    .commitment-shield .badge svg{width:48px;height:48px}
-    .providers,.cert-cats,.frameworks,.roadmap{grid-template-columns:1fr}
-    .stats{grid-template-columns:1fr 1fr}
-    .stat{border-right:0;border-bottom:1px solid var(--gray-200)}
+    .btn{padding:9px 14px;font-size:14px}
+    .nav-cta .btn-ghost{display:none}
+    .hero{padding:48px 0 40px}
+    .hero h1{font-size:clamp(32px,9vw,44px);line-height:1.1}
+    .hero p.lead{font-size:16px;margin-top:18px}
+    .hero-meta{margin-top:24px;flex-direction:column;align-items:flex-start;padding:14px 16px;border-radius:var(--radius-lg);gap:8px;font-size:13px;text-align:left}
+    .trust-strip{margin-top:40px;padding:20px 0}
+    .trust-row{gap:18px 24px;justify-content:flex-start}
+    .trust-row .label{width:100%;text-align:center;margin-bottom:4px}
+    .trust-logo{font-size:13px;height:auto}
+    .trust-logo svg{height:20px}
+    .commitment{margin-top:48px}
+    .commitment-card{padding:28px 22px;border-radius:var(--radius-lg)}
+    .commitment-card h2{font-size:24px}
+    .commitment-card p{font-size:15px}
+    .commitment-grid{grid-template-columns:1fr;gap:20px}
+    .commitment-shield{justify-self:center;width:120px;height:120px}
+    .commitment-shield .badge{width:90px;height:90px}
+    .commitment-shield .badge svg{width:42px;height:42px}
+    .commitment-shield .badge::before,.commitment-shield .badge::after{width:22px;height:42px;bottom:-16px}
+    .commitment-shield .badge::before{left:8px}
+    .commitment-shield .badge::after{right:8px}
+    section.block{padding:48px 0}
+    .section-head{margin-bottom:32px}
+    .section-title{font-size:clamp(26px,6.5vw,34px)}
+    .section-sub{font-size:15px;margin-top:12px}
+    .section-eyebrow{font-size:12px}
+    .stats{grid-template-columns:1fr 1fr;border-radius:var(--radius-lg);margin-top:32px}
+    .stat{padding:20px 16px;border-right:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
     .stat:nth-child(2n){border-right:0}
-    .contact{padding:40px 28px}
-    .contact-inner{grid-template-columns:1fr;gap:28px}
-    .commitment-card{padding:32px 28px}
-    .acc-trigger{padding:18px 18px;gap:14px}
-    .acc-body-inner{padding:0 18px 22px 18px}
+    .stat:nth-last-child(-n+2){border-bottom:0}
+    .stat-num{font-size:22px;line-height:1.1}
+    .stat-label{font-size:12px;margin-top:6px;line-height:1.4}
+    .providers,.cert-cats,.frameworks,.roadmap,.principles{grid-template-columns:1fr;gap:14px}
+    .provider,.fw-card,.road-card,.cert-cat,.principle{padding:20px}
+    .fw-card h4,.road-card h4{font-size:18px}
     .road-card h4{padding-right:0;margin-top:8px}
+    .road-card .ribbon{position:static;display:inline-block;margin-bottom:10px}
+    .principle .num{font-size:24px;margin-bottom:10px}
+    .principle h4{font-size:15px}
+    .principle p{font-size:13px}
+    .cert-cat h4{font-size:16px}
+    .cert-cat li{font-size:13px}
+    .acc-trigger{padding:16px 16px;gap:12px}
+    .acc-icon{width:38px;height:38px}
+    .acc-icon svg{width:18px;height:18px}
+    .acc-title{font-size:16px;line-height:1.3}
+    .acc-meta{font-size:12px;line-height:1.4}
+    .acc-toggle{width:30px;height:30px}
+    .acc-toggle svg{width:14px;height:14px}
+    .acc-body-inner{padding:0 16px 20px 16px;font-size:14px}
+    #faqAccordion .acc-body-inner{padding:0 18px 18px 18px !important}
+    #faqAccordion .acc-title{padding-right:8px}
+    .contact{margin:24px 0 56px;padding:36px 22px;border-radius:var(--radius-lg)}
+    .contact h2{font-size:24px}
+    .contact p{font-size:14px}
+    .contact-inner{grid-template-columns:1fr;gap:24px}
+    .contact-channels{padding:18px}
+    .channel{padding:12px 0;gap:12px}
+    .channel-icon{width:32px;height:32px}
+    .channel-val{font-size:14px;word-break:break-word}
+    footer{padding:40px 0 24px}
+    .foot-grid{grid-template-columns:1fr;gap:32px}
+    .foot-legal{flex-direction:column;align-items:flex-start;text-align:left;font-size:12px}
+  }
+  @media (max-width: 480px){
+    .nav-inner{padding:12px 16px}
+    .container,.container-narrow{padding:0 16px}
+    .hero h1{font-size:30px}
+    .stats{grid-template-columns:1fr}
+    .stat{border-right:0;border-bottom:1px solid var(--gray-200)}
+    .stat:last-child{border-bottom:0}
+    .stat-num{font-size:24px}
+    .commitment-card{padding:24px 18px}
+    .acc-trigger{padding:14px 14px;gap:10px}
+    .acc-icon{width:34px;height:34px}
+    .acc-body-inner{padding:0 14px 18px 14px}
+    .provider-certs{gap:5px}
+    .cert-chip{font-size:10px;padding:4px 8px}
+    .fw-card .pill{font-size:11px}
   }
 </style>
 </head>
